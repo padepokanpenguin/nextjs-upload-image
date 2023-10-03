@@ -15,7 +15,7 @@ export default function ServerUploadPage() {
 
     // With the file data in the buffer, you can do whatever you want with it.
     // For this, we'll just write it to the filesystem in a new location
-    const path = join('/', 'home/rumahpenguinid/Documents/Programming/WebDev/NextJs/project/next-upload-image/public/', file.name)
+    const path = join('/', 'tmp', file.name)
     await writeFile(path, buffer)
     console.log(`open ${path} to see the uploaded file`)
 
